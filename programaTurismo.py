@@ -47,10 +47,10 @@ while True:
                 match Opciones_de_paquete:
                     case 1: # Punta Cana 
                         Precio_Por_Personas = 780 * Cantidad_de_personas
-                        if Cantidad_de_personas <= 4:
-                            Total_En_Dolar = Precio_Por_Personas
-                        else:
-                            Total_En_Dolar = Precio_Por_Personas - (Precio_Por_Personas * 0.035)
+                        Descuento = 0
+                        if Cantidad_de_personas > 4:
+                            Descuento = Precio_Por_Personas * 0.035
+                        Total_En_Dolar = Precio_Por_Personas - Descuento
 
                     case 2: # San Andrés
                         Precio_Por_Personas = 1350 * Cantidad_de_personas
@@ -70,4 +70,5 @@ while True:
 
                 print("\n======= OPERACIÓN CON ÉXITO =======")
                 print(f"Compra en dólares:\t${Total_En_Dolar:.2f}")
-                print(f"Compra en soles:\tS/{Total_EN_Soles:.2f}")      
+                print(f"Compra en soles:\tS/{Total_EN_Soles:.2f}")
+                print(f"Descuento aplicado:\t${Descuento:.2f}")     
