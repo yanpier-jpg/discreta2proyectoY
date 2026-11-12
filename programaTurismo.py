@@ -68,6 +68,6 @@ while True:
 
                 Total_EN_Soles = Total_En_Dolar * tipo_cambio
 
-                print("\n======= OPERACIÓN CON EXITO =======")
-                print("Compra en dólares:\t$", Total_En_Dolar)
-                print("Compra en soles:\tS/", Total_EN_Soles)          
+                print("\n======= OPERACIÓN CON ÉXITO =======")
+                print(f"Compra en dólares:\t${Total_En_Dolar:.2f}")
+                print(f"Compra en soles:\tS/{Total_EN_Soles:.2f}")      
